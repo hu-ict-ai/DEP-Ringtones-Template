@@ -36,7 +36,7 @@ floatSound :: [Float] -> Sound
 floatSound = FloatFrames
 
 instance Eq Sound where
-  (FloatFrames xs) == (FloatFrames ys) = all ((<  0.001) . abs) $ zipWith (-) xs ys
+  (FloatFrames xs) == (FloatFrames ys) = (all ((<  0.001) . abs) $ zipWith (-) xs ys) && (length xs == length ys)
 
 -- TODO: Schrijf de instance-declaraties van Semigroup en Monoid voor Sound.
 -- Semigroup is een typeclass met een operator (<>), die twee waarden combineert;
