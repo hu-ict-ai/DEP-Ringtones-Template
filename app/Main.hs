@@ -38,16 +38,6 @@ incorrectString n r e = (colour Yellow $ "\nHet uitvoeren van " ++ n ++ " werkt 
 errorString :: String -> String
 errorString n = colour Red $ "De functie " ++ n ++ " werkt nog niet, je error was:"
 
-testFunc :: forall a. (Eq a, Show a) => a -> a -> String -> String -> IO ()
-testFunc given expected funcname operationname = do
-  res <- try (evaluate $ given) :: IO (Either SomeException a)
-  case res of
-    Left error -> do putStrLn $ errorString funcname
-                     putStrLn $ colour Grey $ displayException error
-                     putStrLn $ colour Reset ""
-    Right value -> if value == expected then putStrLn $ successString funcname
-                                        else putStrLn $ incorrectString operationname value expected
-
 data ThreeCase x a b c = ThreeLeft x a | ThreeMiddle x b | ThreeRight x c
 
 singleTest :: forall a. (Eq a, Show a) => (a, a, String, String) -> IO (ThreeCase String SomeException (a, a) a)
