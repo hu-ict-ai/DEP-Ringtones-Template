@@ -81,7 +81,7 @@ typesTests = do putStrLn "Tests aan het uitvoeren voor Types.hs:"
                 multiTest [((zipWithR (+) [1..5] [9..13]), [10,12,14,16,18], "zipWithR", "zipWithR (+) [1..5] [9..13]"),
                            ((zipWithR (+) [1..5] [9..11]), [10,12,14], "zipWithR", "zipWithR (+) [1..5] [9..11]"),
                            ((zipWithR (+) [1..3] [9..13]), [10,12,14,12,13], "zipWithR", "zipWithR (+) [1..3] [9..13]"),
-                           ((zipWithR (+) [1..2] [1..4]), [2,4,3,4], "zipWithR", "zipWithR (+) [1..2] [1..4]"]
+                           ((zipWithR (+) [1..2] [1..4]), [2,4,3,4], "zipWithR", "zipWithR (+) [1..2] [1..4]")]
                 multiTest [(exSound1 <> exSound2, exSound3, "Semigroup en Monoid voor Sound", "exSound1 <> exSound2"),
                            (exSound4 <> exSound1, exSound5, "Semigroup en Monoid voor Sound", "exSound4 <> exSound1"),
                            (mempty <> exSound1, exSound1, "Semigroup en Monoid voor Sound", "mempty <> exSound1"),
