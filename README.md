@@ -1,6 +1,8 @@
 # Parsers en Ringtones
 
-In dit practicum gaan we aan de slag met audio-synthesis. We gaan audio genereren op basis van een abstracte representatie van noten en instrumenten. Daarnaast gaan we tekst in het RTTL formaat parsen tot deze abstracte representatie.
+**Voor dit practicum is het wederom de bedoeling om bestaande code aan te vullen en te documenteren. Vergeet niet hierbij gebruik te maken van de [Haddock-stijl](HADDOCK.md)!**
+
+In deze opdracht gaan we aan de slag met audio-synthesis. We gaan audio genereren op basis van een abstracte representatie van noten en instrumenten. Daarnaast gaan we tekst in het RTTL formaat parsen tot deze abstracte representatie.
 
 Jullie opgaven voor dit practicum staan in de bestanden Parsers.hs en Types.hs; Instruments.hs bevat onze zogenoemde "synthesizermodule". Hier zitten geen opgaven in, maar uiteraard worden de functies daaruit wel gebruikt door de rest van de code.
 
